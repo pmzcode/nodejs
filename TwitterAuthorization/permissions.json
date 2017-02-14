@@ -1,0 +1,48 @@
+{
+  "/books": "user",
+  "/books/:id": "user",
+  "/books/create": "user",
+
+
+  "/books": "admin",
+  "/books/:id": "admin",
+  "/books/create": "admin",
+  "/books/update": "admin",
+  "/books/delete": "admin",
+
+
+  "/library": "user",
+  "/library/:id": "user",
+  "/library/create": "user",
+
+
+  "/library": "admin",
+  "/library/:id": "admin",
+  "/library/create": "admin",
+  "/library/update": "admin",
+  "/library/delete": "admin",
+
+  "/authors": "user",
+  "/authors/:id": "user",
+  "/authors/create": "user",
+
+
+  "/authors": "admin",
+  "/authors/:id": "admin",
+  "/authors/create": "admin",
+  "/authors/update": "admin",
+  "/authors/delete": "admin",
+
+
+  "/users": "admin",
+  "/users/:id": "admin",
+  "/users/update": "admin",
+  "/users/delete": "admin",
+  "/users/grant": "admin",
+  "/users/revoke": "admin",
+
+  "/roles": "admin",
+  "/roles/:id": "admin",
+  "/roles/create": "admin",
+  "/roles/delete": "admin"
+}

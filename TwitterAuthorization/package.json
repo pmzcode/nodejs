@@ -1,0 +1,21 @@
+{
+  "name": "sample",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "bcryptjs": "^2.3.0",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.1"
+
+
+
+
+
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "db": {
+    "dialect":"mysql",
+    "host": "127.0.0.1",
+    "name": "somebd",
+    "user": "root",
+    "password": "root"
+  },
+  "log": {
+    "logSize": "100",
+    "root":"logs/",
+    "format":".json",
+    "defaultName":"1"
+  },
+  "env": "dev",
+  "cacheTime": 30,
+  "cookie": {
+    "key": "secret key",
+    "auth": "__auth_id",
+    "roleName":"role"
+  },
+  "defaults": {
+    "readChunk": {
+      "limit": 10,
+      "page": 1,
+      "order": "asc",
+      "orderField": "id"
+    },
+    "search": {
+      "searchKey": ""
+    }
+  },
+  "twitter": {
+    "consumerKey": "dl0TSJxpHuiNKNKkj9UeDy1xF",
+    "consumerSecret": "UzQc6udFjFdIpASnLafhDSgVUs9RRJ7nBicuqoG0i6HkAJ7iPm",
+    "callbackURL": "http://127.0.0.1:3000/api/auth/login/twitter/return"
+  }
+}

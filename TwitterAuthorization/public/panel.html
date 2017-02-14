@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js"></script>
+
+</head>
+<body>
+<form style="float: right" action="/api/auth/logout" method="post">
+    <button type="submit">Выйти</button>
+</form>
+<form name="search" action="">
+    <input type="text" placeholder="Что ищем?" id="search">
+    <select id="type">
+        <option value="books">Книги</option>
+        <option value="authors">Авторы</option>
+        <option value="libraries">Библиотеки</option>
+        <option value="all">Всё</option>
+    </select>
+    <button type="submit">Искать</button>
+</form>
+<h2>Книги</h2>
+<table class="table" id="books"></table>
+<h2>Авторы</h2>
+<table class="table" id="authors"></table>
+<h2>Библиотеки</h2>
+<table class="table" id="libraries"></table>
+<h2 class="moderator admin">Пользователи</h2>
+<table class="table moderator admin" id="users"></table>
+<script src="script.js"></script>
+<script>
+    document.forms.search.onsubmit = function() {
+        var searchStr = document.getElementById('search').value;
+        var type = document.getElementById('type').value;
+        console.log(searchStr,type);
+        if(type=="books"){
+            getBooks(10,1,"asc","id","&searchKey="+searchStr);
+        }
+        if(type=="authors"){
+            getAuthors(10,1,"asc","id","&searchKey="+searchStr);
+        }
+        if(type=="libraries"){
+            getLibraries(10,1,"asc","id","&searchKey="+searchStr);
+        }
+        if(type=="all"){
+            getBooks(10,1,"asc","id","&searchKey="+searchStr);
+            getAuthors(10,1,"asc","id","&searchKey="+searchStr);
+            getLibraries(10,1,"asc","id","&searchKey="+searchStr);
+        }
+        return false;
+    };
+</script>
+</body>
+</html>
