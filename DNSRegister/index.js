@@ -7,7 +7,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var jwt = require('jsonwebtoken');
 const Sequelize = require('sequelize');
-const config = require('./config')
+const config = require('./config');
 var dbcontext = require('./context/db')(Sequelize, config);
 
 var passport = require("passport");
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 
 app.use(express.static('public'));

@@ -6,8 +6,8 @@ module.exports = (userService, domainService, config) => {
     const domainController = require('./domain')(domainService, promiseHandler);
 
 
-    router.use('/users', userController);
-    router.use('/domains', domainController);
+    router.use('/user', userController);
+    router.use('/domain', domainController);
 
     return router;
 };

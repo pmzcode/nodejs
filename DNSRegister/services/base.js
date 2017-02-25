@@ -22,7 +22,7 @@ function BaseService(repository, errors) {
     this.read = read;
     this.baseCreate = baseCreate;
     this.baseUpdate = baseUpdate;
-    this.baseDelete = del;
+    this.del = del;
 
     function readChunk(options) {
         return new Promise((resolve, reject) => {

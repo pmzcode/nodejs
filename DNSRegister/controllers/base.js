@@ -46,7 +46,7 @@ function BaseController(service, promiseHandler) {
 
     function del(req, res) {
         promiseHandler(res,
-            service.delete(req.body.id)
+            service.del(req.params.id)
         );
     }
 
